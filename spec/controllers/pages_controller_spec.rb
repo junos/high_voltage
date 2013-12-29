@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HighVoltage::PagesController do
+describe HighVoltage::PagesController, '#show' do
   render_views
 
   context 'using default configuration' do
