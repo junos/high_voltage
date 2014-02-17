@@ -13,7 +13,7 @@ module HighVoltage::StaticPage
     end
 
     if respond_to?(:caches_action)
-      caches_action :show, layout: HighVoltage.action_caching_layout,
+      caches_action :show, :expires_in => 1.hour, layout: HighVoltage.action_caching_layout,
         if: -> { HighVoltage.action_caching }
     end
 
